@@ -1,7 +1,13 @@
 def tell_browser_type(browser)
-  browser_type_is_safari = browser.type == "Safari"
-  safari_message = "You are using the Safari browser."
-  not_safari_message = "You are using a non-Safari browser."
+  default == "Safari"
+  browser_type_is_safari = browser.type == default
 
-  browser_type_is_safari ? puts safari_message : puts not_safari_message
+  print_message(browser_type_is_safari, default)
+end
+
+def print_message(is_safari, default)
+  safari_message = "You are using the #{default} browser."
+  not_safari_message = "You are using a non-#{default} browser."
+
+  is_safari ? safari_message : not_safari_message
 end
